@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HANG UP GAME</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <div class="menu-container">
+      <div style="width: 400px; margin: 0 0 0 0;">
+        <h1 class="titulo">HANG UP</h1>
+        <button class="btn" id="iniciar-juego">INICIAR JUEGO</button>
+      </div>
+  
+      <div  class="addWord-container">
+        <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra" value="">
+        <button class="btn" id="nueva-palabra">AGREGAR PALABRA</button> 
+      </div>
+    </div>
+
+    <div style="text-align:center;" id="ahorcado-game">
+      <canvas id="ahorcado" height="800px" width="1200px"></canvas>
+      <div id="words-container"></div>
+      <span id="wrong-letters"></span>
+      <span id="close-button">X</span>
+      <p id='requeriments'>SÓLO SE PERMITEN LETRAS MAYÚSCULAS.</p>
+    </div>
+
+    <div id="alerts">
+      <div id="lose-alert">
+        <p>FIN DEL JUEGO, HAS PERDIDO! :(</p>
+        <button class="reset-button">Reintentar</button>
+      </div>
+  
+      <div id="win-alert">
+        <p>GANASTE, FELICIDADES!!!</p>
+        <button class="reset-button" id="win-button">Volver a jugar</button>
+      </div>
+    </div>
+
+    <div id="success-added">
+      <p>AGREGADO CON ÉXITO A LA LISTA DE PALABRAS!!</p>
+    </div>
+
+    <script type="text/javascript" src="./src/ahorcado.js"></script>
+  </body>
+</html>

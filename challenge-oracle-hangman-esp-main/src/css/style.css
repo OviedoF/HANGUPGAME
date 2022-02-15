@@ -1,0 +1,203 @@
+:root {
+  --bg-color: #288fb4;
+  --secondary-color: #009f9d;
+  --light-color: #cdffeb;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--light-color);
+}
+
+canvas {
+  color: var(--light-color);
+}
+
+.menu-container {
+  display: flex;
+  margin-left: 22%;
+  margin-top: 100px;
+}
+.menu-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-container div h1 {
+  padding: 0;
+  width: 130px;
+}
+.menu-container .addWord-container {
+  width: 500px;
+  text-align: center;
+}
+
+.titulo {
+  padding: 15px;
+  width: 30vw;
+  margin: auto;
+}
+
+.btn {
+  border: 0;
+  color: var(--light-color);
+  font-weight: bold;
+  background-color: #2d767f;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.5em;
+}
+
+.text-input {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: var(--light-color);
+  display: block;
+  padding: 0.5em;
+  width: 50%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#iniciar-juego {
+  cursor: pointer;
+}
+
+#ahorcado-game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: all 1s;
+  background-color: var(--bg-color);
+}
+#ahorcado-game canvas {
+  width: 50%;
+}
+#ahorcado-game #requeriments {
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+}
+#ahorcado-game div {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#ahorcado-game div .span-game {
+  margin-left: 15px;
+  width: 30px;
+  border-bottom: 2px solid var(--light-color);
+}
+#ahorcado-game #wrong-letters {
+  color: lightcoral;
+  font-weight: bold;
+  letter-spacing: 10px;
+  font-size: 30px;
+  top: 30px;
+  position: absolute;
+  width: 100%;
+}
+#ahorcado-game #close-button {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#nueva-palabra {
+  cursor: pointer;
+}
+
+#lose-alert {
+  z-index: 4;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  display: flex;
+  background-color: lightcoral;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#win-alert {
+  z-index: 3;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  display: flex;
+  background-color: lightgreen;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#alerts {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+}
+#alerts div button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid black;
+  width: 50%;
+  height: 50px;
+  background-color: lightsteelblue;
+  border-radius: 5px;
+}
+
+#success-added {
+  opacity: 0;
+  position: absolute;
+  bottom: 300px;
+  left: 40%;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  background-color: var(--light-color);
+  border-radius: 20px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  border: 2px solid var(--light-color);
+  transition: all 0.5s;
+}
+
+@keyframes zoom {
+  50% {
+    transform: scale(1.4);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
