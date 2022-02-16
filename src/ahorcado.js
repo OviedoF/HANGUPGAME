@@ -1,7 +1,7 @@
 (() => {
     /* Declaraciones */
 
-    let words = ['COMPUTADOR', 'FOTO', 'MARCO', 'CONTROL', 'BOTELLA', 'CELULAR', 'MUEBLE', 'PERRO', 'GATO'];
+    let words = ['COMPUTADOR', 'FOTO', 'MARCO', 'CONTROL', 'BOTELLA', 'CELULAR', 'MUEBLE', 'PERRO', 'GATO', 'TORMENTA', 'TECLADO', 'TAZA', 'VASO', 'ESTUFA', 'MONTAÑA', 'CAMISA', 'DISCO', 'NEGOCIO','BANANA', 'MANZANA', 'GASEOSA', 'ALFOMBRA', 'VENTANA', 'CABLES', 'PISTOLA', 'TENEDOR', 'MESA', 'TOCADISCOS', 'GANCHO', 'CHANCHO', 'VACA', 'CANASTA'];
     let random =  Math.floor(Math.random() * words.length);
     let chooseWord = words[random];
     let chooseWordIndexs;
@@ -105,7 +105,8 @@
                             ctx.lineTo(860, 388);
                             ctx.stroke();
                             ctx.closePath();
-    
+
+                            document.getElementById('correct-word').textContent = chooseWord;
                             document.getElementById('alerts').style.display= 'block';
                             document.getElementById('lose-alert').style.zIndex= '10';
                             window.removeEventListener('keyup', handleKeys);
